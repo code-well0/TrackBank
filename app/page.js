@@ -11,7 +11,7 @@ export default function DashboardOverview() {
         <div className="flex items-center gap-2 text-zinc-600 dark:text-zinc-300 font-medium text-sm mb-2">
           {/* Optional small text like the review stars in the image, but the user said "just add slogan nothing else" */}
         </div>
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-zinc-900 dark:text-white tracking-tight leading-[1.1]">
+        <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-zinc-900 dark:text-white tracking-tight leading-[1.1]">
           Track your spending, <br className="hidden md:block"/>
           be your own banking.
         </h1>
