@@ -1,22 +1,50 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F9F7F2;
+  --foreground: #0B4650;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #062a30; /* Dark Teal */
+    --foreground: #F9F7F2;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
+  /* Map Zinc to Cream (light) and Teal (dark) */
+  --color-zinc-50: #f4f0e6;
+  --color-zinc-100: #e8e4db;
+  --color-zinc-200: #d6d1c4;
+  --color-zinc-300: #c2bdb0;
+  --color-zinc-400: #898A8D;
+  --color-zinc-500: #898A8D;
+  --color-zinc-600: #6e6f72;
+  --color-zinc-700: #555557;
+  --color-zinc-800: #0B4650; /* Base Teal for dark components */
+  --color-zinc-900: #083239; /* Darker Teal */
+  --color-zinc-950: #062a30; /* Darkest Teal */
+
+  /* Map Blue to Teal (light mode primary) and Lime (dark mode primary) */
+  --color-blue-50: color-mix(in srgb, #0B4650 5%, transparent);
+  --color-blue-100: color-mix(in srgb, #0B4650 10%, transparent);
+  --color-blue-200: color-mix(in srgb, #0B4650 20%, transparent);
+  --color-blue-300: #E6FF2B;
+  --color-blue-400: #E6FF2B; /* Lime for dark text */
+  --color-blue-500: #E6FF2B; /* Lime for dark active */
+  --color-blue-600: #0B4650; /* Teal for light active */
+  --color-blue-700: #083239;
+  --color-blue-800: #062a30;
+  --color-blue-900: #051f24;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
