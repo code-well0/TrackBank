@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TrackBank 🚀
 
-## Getting Started
+> "Track your spending, be your own banking"
 
-First, run the development server:
+TrackBank is a modern, full-stack personal finance and banking dashboard. Designed with a premium fintech aesthetic, it allows users to keep close tabs on their financial activities, monitor spending trends, and take full control of their economic profiles from a unified, intuitive interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **📊 Comprehensive Dashboard overview**: Get an instant summary of your Total Balance, Monthly Income, and Expenses, complete with trend indicators.
+- **📈 Interactive Financial Charts**: Beautiful, responsive visualizations plotting your balance history and categorizing your spending, powered by Recharts.
+- **💸 Transaction Management**: A robust transaction table providing a detailed breakdown of all your recent financial activity.
+- **💡 Smart Insights & Health Score**: Built-in insights section and financial health score meter to help guide your financial decisions.
+- **🌓 Dark Mode**: Seamlessly switch between a custom light mode (Cream) and a stylish dark mode (Dark Teal and Lime) via `next-themes`.
+- **🔐 Role-Based Views**: Context-driven UI scaling based on user roles (`Admin` or `Viewer`).
+- **📱 Fully Responsive**: Highly optimized layout ensuring a perfect experience on mobile phones, tablets, and wide-screen desktop displays.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is built using cutting-edge tools to ensure blazing-fast performance and a highly maintainable codebase:
 
-## Learn More
+- **Framework**: [Next.js](https://nextjs.org/) (Version 16, utilizing the App Router)
+- **UI Library**: [React](https://reactjs.org/) (Version 19)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) — customized with a unique fintech palette.
+- **Charting**: [Recharts](https://recharts.org/) — for flexible, declarative visualizations.
+- **Icons**: [Lucide React](https://lucide.dev/) — clean and consistent SVG icons.
+- **Utilities**: `tailwind-merge` and `clsx` for intelligent CSS class merging.
+- **Theming**: `next-themes` for effortless dark/light mode toggling.
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+First, make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone the repository and navigate to the project directory:
+   ```bash
+   git clone https://github.com/code-well0/TrackBank.git
+   cd TrackBank
+   ```
 
-## Deploy on Vercel
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 🎨 Theme & Brand Palette
+The project uses a custom override on standard Tailwind colors injected via `app/globals.css`. 
+- **Light Theme**: Cream (`#F9F7F2`) Backgrounds, Teal (`#0B4650`) Accents
+- **Dark Theme**: Deep Teal (`#062a30`) Backgrounds, Lime (`#E6FF2B`) Highlights
+
+## 📂 Project Structure Overview
+- `app/` - Next.js App Router root, pages (`/transactions`, `/insights`), and global CSS config.
+- `components/` - React components divided logically by feature (`dashboard/`, `layout/`, `transactions/`, `ui/`).
+- `context/` - Global state providers such as `RoleContext.js`.
+- `data/` - Mock data files seeding the initial interface.
+- `lib/` - Utility functions such as class mergers and currency formatters.
